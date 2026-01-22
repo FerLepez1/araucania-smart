@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araucanía Smart | Domótica y seguridad inteligente</title>
+    <meta name="description" content="Domótica y seguridad inteligente para espacios y proyectos. Automatización, sensores, monitoreo y control. Araucanía, Chile.">
+
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-light: #111827;
+            --primary: #38bdf8;
+            --text-main: #e5e7eb;
+            --text-muted: #9ca3af;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .hero img {
+            width: 120px;
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 6px;
+            background-color: var(--primary);
+            color: #020617;
+            font-weight: 600;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--bg-light);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li::before {
+            content: "• ";
+            color: var(--primary);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img src="assets/logo.png" alt="Araucanía Smart">
+
+        <h1>Tecnología clara. Implementación seria.</h1>
+        <p>
+            Domótica y seguridad inteligente para espacios y proyectos.
+            Diseñamos soluciones que permiten detectar, analizar y actuar
+            ante distintos eventos, priorizando control y estabilidad.
+        </p>
+
+        <a href="#contacto" class="btn">Contacto</a>
+    </section>
+
+    <!-- QUÉ HACEMOS -->
+    <section>
+        <h2>Qué hacemos</h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Domótica</h3>
+                <p>
+                    Automatización inteligente de espacios que va más allá del
+                    encendido de luces. Sistemas capaces de detectar movimiento,
+                    presencia, humo, gas, temperatura y otras condiciones del entorno.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Seguridad</h3>
+                <p>
+                    Sistemas de seguridad activos que integran cámaras, sensores
+                    y automatizaciones para monitoreo continuo y respuesta
+                    ante eventos reales.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Integraciones</h3>
+                <p>
+                    Ecosistemas donde cámaras, sensores y sistemas de control
+                    trabajan juntos para generar respuestas automáticas y
+                    notificaciones inteligentes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO TRABAJAMOS -->
+    <section>
+        <h2>Cómo trabajamos</h2>
+        <p>
+            Abordamos cada proyecto desde una perspectiva técnica y estratégica.
+            No vendemos productos aislados: diseñamos soluciones completas,
+            pensadas para funcionar de forma confiable en el tiempo.
+        </p>
+
+        <ul>
+            <li>Soluciones a medida según cada espacio o proyecto</li>
+            <li>Tecnología abierta y escalable</li>
+            <li>Integraciones reales, no promesas comerciales</li>
+            <li>Enfoque en estabilidad, mantenimiento y crecimiento</li>
+        </ul>
+    </section>
+
+    <!-- TECNOLOGÍA -->
+    <section>
+        <h2>Tecnología</h2>
+        <p>
+            Utilizamos tecnologías de monitoreo y automatización que permiten
+            detectar condiciones del entorno, analizar eventos y ejecutar
+            acciones automáticas según reglas definidas para cada proyecto.
+        </p>
+
+        <p>
+            Desde sensores ambientales hasta sistemas de análisis inteligente,
+            siempre seleccionados según las necesidades reales del espacio.
+        </p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes un proyecto o una idea que quieras automatizar o proteger?</p>
+
+        <p>
+            📩 <strong>contacto@araucaniasmart.com</strong><br>
+            📸 Instagram:
+            <a href="https://instagram.com/araucaniasmart" target="_blank">
+                @araucaniasmart
+            </a><br>
+            📍 Araucanía, Chile
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © Araucanía Smart — Domótica y seguridad inteligente
+    </footer>
+
+</body>
+</html>
