@@ -331,32 +331,43 @@ footer {
     </p>
 
     <div class="contact-wrapper">
-        <form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
+       <form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
+    
+    <!-- CONFIGURACIÓN -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="Nuevo contacto desde Araucanía Smart">
+    <input type="hidden" name="_next" value="https://araucaniasmart.com/gracias.html">
 
-            <label>Nombre
-                <input type="text" name="name" placeholder="Tu nombre" required>
-            </label>
+    <!-- CAMPOS -->
+    <label>
+        Nombre
+        <input type="text" name="Nombre" placeholder="Tu nombre" required>
+    </label>
 
-            <label>Correo
-                <input type="email" name="email" placeholder="correo@ejemplo.cl" required>
-            </label>
+    <label>
+        Correo
+        <input type="email" name="Correo" placeholder="correo@ejemplo.cl" required>
+    </label>
 
-            <label>Tipo de proyecto
-                <select name="project">
-                    <option>Hogar</option>
-                    <option>Empresa</option>
-                    <option>Proyecto técnico</option>
-                    <option>Otro</option>
-                </select>
-            </label>
+    <label>
+        Tipo de proyecto
+        <select name="Tipo de proyecto">
+            <option>Hogar</option>
+            <option>Empresa</option>
+            <option>Proyecto técnico</option>
+            <option>Otro</option>
+        </select>
+    </label>
 
-            <label>Mensaje
-                <textarea name="message" placeholder="Cuéntanos brevemente tu necesidad o idea." required></textarea>
-            </label>
+    <label>
+        Mensaje
+        <textarea name="Mensaje" placeholder="Cuéntanos brevemente tu necesidad o idea." required></textarea>
+    </label>
 
-            <button type="submit" class="btn">Enviar consulta</button>
-        </form>
+    <button type="submit" class="btn">Enviar consulta</button>
+</form>
+
 
         <div class="contact-info">
             <h3>Contacto directo</h3>
@@ -381,3 +392,4 @@ footer {
 
 </body>
 </html>
+
