@@ -157,50 +157,91 @@ footer {
     <a href="#contacto" class="btn">Contacto</a>
 </section>
 
-<!-- CÓMO TRABAJAMOS -->
+<!-- QUÉ HACEMOS -->
 <section>
-    <h2>Cómo trabajamos</h2>
-
-    <p>
-        Abordamos cada proyecto como un sistema completo, no como una instalación puntual.
-        Antes de definir cualquier solución técnica, analizamos el contexto, los riesgos,
-        el uso real y las proyecciones futuras del espacio o proyecto.
-    </p>
-
-    <p>
-        Cada decisión técnica tiene un propósito claro; diseñamos una estrategia única
-        según la necesidad de cada proyecto.
-    </p>
-
+    <h2>Qué hacemos</h2>
     <div class="grid">
         <div class="card">
-            <h3>Análisis y diseño</h3>
-            <p>
-                Evaluamos el entorno, las necesidades reales y las posibles evoliones del proyecto.
-                Definimos una arquitectura técnica coherente desde el inicio, considerando seguridad,
-                estabilidad y la posibilidad de crecimiento sin rehacer el sistema más adelante.
-            </p>
+            <h3>Domótica</h3>
+            <p>Automatización inteligente, sensores, control y monitoreo adaptados a cada espacio.</p>
         </div>
-
         <div class="card">
-            <h3>Implementación técnica</h3>
-            <p>
-                Implementamos soluciones basadas en plataformas abiertas y tecnologías probadas,
-                evitando dependencias innecesarias de marcas cerradas o servicios obligatorios.
-                Esto permite que cámaras, sensores y controles funcionen como un solo ecosistema,
-                con control local y automatización real.
-            </p>
+            <h3>Seguridad</h3>
+            <p>Cámaras, detección de eventos y sistemas activos de respuesta automatizada.</p>
         </div>
-
         <div class="card">
-            <h3>Sistemas en operación real</h3>
-            <p>
-                Nuestro enfoque se aleja de las simulaciones y los prototipos. Entregamos sistemas
-                diseñados para la ejecución real, operativa y capaces de generar resultados desde
-                el primer día.
-            </p>
+            <h3>Integraciones</h3>
+            <p>Sistemas que trabajan juntos: datos, reglas y acciones en un solo ecosistema.</p>
         </div>
     </div>
+</section>
+    
+<!-- CÓMO TRABAJAMOS -->
+<section>
+  <h2>Cómo trabajamos</h2>
+
+  <p>
+    Abordamos cada proyecto como un sistema completo, no como una instalación puntual.
+    Antes de definir cualquier solución técnica, analizamos el contexto, los riesgos,
+    el uso real y las proyecciones futuras del espacio o proyecto.
+  </p>
+
+  <p>
+    Cada decisión técnica tiene un propósito claro; diseñamos una estrategia única
+    según la necesidad de cada proyecto.
+  </p>
+
+  <!-- FILA 1 -->
+  <div class="grid">
+    <div class="card">
+      <h3>Análisis y diseño</h3>
+      <p>
+        Evaluamos el entorno, las necesidades reales y las posibles evoliones del proyecto.
+        Definimos una arquitectura técnica coherente desde el inicio, considerando seguridad,
+        estabilidad y la posibilidad de crecimiento sin rehacer el sistema más adelante.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Implementación técnica</h3>
+      <p>
+        Implementamos soluciones basadas en plataformas abiertas y tecnologías probadas,
+        evitando dependencias innecesarias de marcas cerradas o servicios obligatorios.
+        Esto permite que cámaras, sensores y controles funcionen como un solo ecosistema,
+        con control local y automatización real.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Sistemas en operación real</h3>
+      <p>
+        Nuestro enfoque se aleja de las simulaciones y los prototipos.
+        Entregamos sistemas diseñados para la ejecución real, operativa y capaces
+        de generar resultados desde el primer día.
+      </p>
+    </div>
+  </div>
+
+  <!-- FILA 2 -->
+  <div class="grid" style="margin-top:30px;max-width:760px;margin-left:auto;margin-right:auto;">
+    <div class="card">
+      <h3>Detección y alertas</h3>
+      <p>
+        El sistema analiza eventos en tiempo real y genera alertas automáticas
+        cuando detecta situaciones relevantes, permitiendo una respuesta rápida
+        y basada en reglas definidas previamente.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Estabilidad y proyección</h3>
+      <p>
+        Diseñamos sistemas pensados para mantenerse en el tiempo,
+        crecer y adaptarse sin necesidad de rehacer la instalación,
+        asegurando continuidad operativa y control a largo plazo.
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- EJEMPLO REAL -->
@@ -222,21 +263,67 @@ footer {
 
 <!-- CONTACTO -->
 <section id="contacto">
-    <h2>Contacto</h2>
-    <p>
-        Escríbenos y conversemos tu proyecto.
-    </p>
+    <h2>Hablemos de tu proyecto</h2>
+    <p>Si tienes una idea, una necesidad o un proyecto en mente, conversemos.</p>
 
-    <p>
-        📩 contacto@araucaniasmart.com<br>
-        📍 Región de La Araucanía, Chile<br>
-        💬 WhatsApp: <a href="https://wa.me/56920131606" target="_blank">+56 9 2013 1606</a>
-    </p>
+    <div class="contact-wrapper">
+
+        <!-- FORMULARIO FUNCIONAL -->
+        <form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Nuevo contacto desde Araucanía Smart">
+            <input type="hidden" name="_template" value="table">
+
+            <label>
+                Nombre
+                <input type="text" name="name" required>
+            </label>
+
+            <label>
+                Correo
+                <input type="email" name="email" required>
+            </label>
+
+            <label>
+                Tipo de proyecto
+                <select name="project_type">
+                    <option>Hogar</option>
+                    <option>Empresa</option>
+                    <option>Proyecto técnico</option>
+                    <option>Otro</option>
+                </select>
+            </label>
+
+            <label>
+                Mensaje
+                <textarea name="message" rows="4" required></textarea>
+            </label>
+
+            <button type="submit" class="btn">Enviar consulta</button>
+
+        </form>
+
+        <!-- INFO -->
+        <div class="contact-info">
+            <p><strong>Contacto directo</strong></p>
+            <p>
+                📩 contacto@araucaniasmart.com<br>
+                📍 Región de La Araucanía, Chile<br>
+                📸 Instagram: <a href="https://instagram.com/araucaniasmart" target="_blank">@araucaniasmart</a>
+            </p>
+
+            <p><strong>Tecnología clara.<br>Implementación seria.</strong></p>
+        </div>
+
+    </div>
 </section>
 
 <footer>
-    © Araucanía Smart — Tecnología clara. Implementación seria.
+    © Araucanía Smart — Domótica y seguridad inteligente
 </footer>
 
 </body>
 </html>
+
+
