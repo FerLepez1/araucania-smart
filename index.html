@@ -134,6 +134,35 @@ a {
     }
 }
 
+.contact-wrapper{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap:60px;
+  margin-top:40px;
+}
+
+form label{
+  display:block;
+  margin-bottom:18px;
+  font-size:0.9rem;
+}
+
+.contact-info h3{
+  margin-bottom:12px;
+}
+
+.contact-info .claim{
+  margin-top:24px;
+  font-weight:600;
+}
+
+@media(max-width:900px){
+  .contact-wrapper{
+    grid-template-columns:1fr;
+  }
+}
+
+    
 /* FOOTER */
 footer {
     text-align: center;
@@ -263,67 +292,62 @@ footer {
 
 <!-- CONTACTO -->
 <section id="contacto">
-    <h2>Hablemos de tu proyecto</h2>
-    <p>Si tienes una idea, una necesidad o un proyecto en mente, conversemos.</p>
+  <h2>Hablemos de tu proyecto</h2>
+  <p>
+    Si tienes una idea, una necesidad concreta o un proyecto en desarrollo,
+    conversemos y evaluemos la mejor solución técnica.
+  </p>
 
-    <div class="contact-wrapper">
+  <div class="contact-wrapper">
 
-        <!-- FORMULARIO FUNCIONAL -->
-        <form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
+    <!-- FORMULARIO -->
+    <form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
 
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="Nuevo contacto desde Araucanía Smart">
-            <input type="hidden" name="_template" value="table">
+      <label>
+        Nombre
+        <input type="text" name="name" placeholder="Tu nombre" required>
+      </label>
 
-            <label>
-                Nombre
-                <input type="text" name="name" required>
-            </label>
+      <label>
+        Correo
+        <input type="email" name="email" placeholder="correo@ejemplo.cl" required>
+      </label>
 
-            <label>
-                Correo
-                <input type="email" name="email" required>
-            </label>
+      <label>
+        Tipo de proyecto
+        <select name="project">
+          <option>Hogar</option>
+          <option>Empresa</option>
+          <option>Proyecto técnico</option>
+          <option>Otro</option>
+        </select>
+      </label>
 
-            <label>
-                Tipo de proyecto
-                <select name="project_type">
-                    <option>Hogar</option>
-                    <option>Empresa</option>
-                    <option>Proyecto técnico</option>
-                    <option>Otro</option>
-                </select>
-            </label>
+      <label>
+        Mensaje
+        <textarea name="message" rows="4"
+          placeholder="Cuéntanos brevemente tu necesidad o idea." required></textarea>
+      </label>
 
-            <label>
-                Mensaje
-                <textarea name="message" rows="4" required></textarea>
-            </label>
+      <button type="submit" class="btn">Enviar consulta</button>
+    </form>
 
-            <button type="submit" class="btn">Enviar consulta</button>
+    <!-- CONTACTO DIRECTO -->
+    <div class="contact-info">
+      <h3>Contacto directo</h3>
+      <p>
+        📩 contacto@araucaniasmart.com<br>
+        📍 Región de La Araucanía, Chile<br>
+        💬 WhatsApp: +56 9 2013 1606<br>
+        📸 Instagram: @araucaniasmart
+      </p>
 
-        </form>
-
-        <!-- INFO -->
-        <div class="contact-info">
-            <p><strong>Contacto directo</strong></p>
-            <p>
-                📩 contacto@araucaniasmart.com<br>
-                📍 Región de La Araucanía, Chile<br>
-                📸 Instagram: <a href="https://instagram.com/araucaniasmart" target="_blank">@araucaniasmart</a>
-            </p>
-
-            <p><strong>Tecnología clara.<br>Implementación seria.</strong></p>
-        </div>
-
+      <p class="claim">
+        Tecnología clara.<br>
+        Implementación seria.
+      </p>
     </div>
+
+  </div>
 </section>
-
-<footer>
-    © Araucanía Smart — Domótica y seguridad inteligente
-</footer>
-
-</body>
-</html>
-
-
