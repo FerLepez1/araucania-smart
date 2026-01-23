@@ -10,8 +10,8 @@
 
 <style>
 :root {
-    --bg-dark: #020617;
-    --bg-card: #0f172a;
+    --bg-dark: #0b1220;
+    --bg-card: #111827;
     --primary: #38bdf8;
     --text-main: #e5e7eb;
     --text-muted: #9ca3af;
@@ -42,12 +42,12 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     margin-bottom: 25px;
 }
 
@@ -71,18 +71,20 @@ a {
     padding: 14px 34px;
     background: var(--primary);
     color: #020617;
-    border-radius: 10px;
+    border-radius: 8px;
     font-weight: 600;
+    border: none;
+    cursor: pointer;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding-top: 140px;
+    padding-top: 130px;
 }
 
 .hero img {
-    width: 230px;
+    width: 200px;
     margin-bottom: 35px;
 }
 
@@ -98,15 +100,15 @@ a {
     background: linear-gradient(180deg, #0f172a, #020617);
     border: 1px solid var(--border-soft);
     padding: 32px;
-    border-radius: 18px;
+    border-radius: 16px;
 }
 
 /* EJEMPLO REAL */
 .example-box {
     background: linear-gradient(180deg, #0f172a, #020617);
     border: 1px solid var(--border-soft);
-    border-radius: 22px;
-    padding: 40px;
+    border-radius: 20px;
+    padding: 35px;
 }
 
 .example-grid {
@@ -118,7 +120,7 @@ a {
 
 .example-grid img {
     width: 100%;
-    border-radius: 16px;
+    border-radius: 14px;
     border: 1px solid var(--border-soft);
 }
 
@@ -126,12 +128,6 @@ a {
     text-align: center;
     margin-top: 25px;
     font-weight: 500;
-}
-
-@media (max-width: 900px) {
-    .example-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* CONTACTO */
@@ -142,64 +138,52 @@ a {
     margin-top: 40px;
 }
 
+form {
+    background: linear-gradient(180deg, #0f172a, #020617);
+    border: 1px solid var(--border-soft);
+    padding: 32px;
+    border-radius: 16px;
+}
+
 form label {
     display: block;
     margin-bottom: 18px;
     font-size: 0.9rem;
-    color: var(--text-main);
 }
 
-form input,
-form select,
-form textarea {
+input, textarea, select {
     width: 100%;
-    padding: 14px 16px;
-    margin-top: 8px;
-    background: #020617;
-    border: 1px solid var(--border-soft);
-    border-radius: 10px;
+    padding: 10px;
+    margin-top: 6px;
+    background-color: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 6px;
     color: var(--text-main);
-    font-size: 0.95rem;
 }
 
-form input::placeholder,
-form textarea::placeholder {
-    color: var(--text-muted);
-}
-
-form input:focus,
-form select:focus,
-form textarea:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(56,189,248,0.15);
-    outline: none;
-}
-
-form textarea {
+textarea {
     resize: vertical;
-    min-height: 120px;
 }
 
 .contact-info h3 {
-    margin-bottom: 14px;
-}
-
-.contact-info p {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .contact-info .claim {
-    margin-top: 25px;
+    margin-top: 24px;
     font-weight: 600;
 }
 
 @media (max-width: 900px) {
+    .example-grid {
+        grid-template-columns: 1fr;
+    }
+
     .contact-wrapper {
         grid-template-columns: 1fr;
     }
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -243,116 +227,81 @@ footer {
 
 <!-- CÓMO TRABAJAMOS -->
 <section>
-    <h2>Cómo trabajamos</h2>
+<h2>Cómo trabajamos</h2>
 
-    <p>
-        Abordamos cada proyecto como un sistema completo, no como una instalación puntual.
-        Antes de definir cualquier solución técnica, analizamos el contexto, los riesgos,
-        el uso real y las proyecciones futuras del espacio o proyecto.
-    </p>
+<p>
+Abordamos cada proyecto como un sistema completo, no como una instalación puntual.
+Antes de definir cualquier solución técnica, analizamos el contexto, los riesgos,
+el uso real y las proyecciones futuras del espacio o proyecto.
+</p>
 
-    <p>
-        Cada decisión técnica tiene un propósito claro; diseñamos una estrategia única
-        según la necesidad de cada proyecto.
-    </p>
+<p>
+Cada decisión técnica tiene un propósito claro; diseñamos una estrategia única
+según la necesidad de cada proyecto.
+</p>
 
-    <!-- 3 ARRIBA -->
-    <div class="grid">
-        <div class="card">
-            <h3>Análisis y diseño</h3>
-            <p>
-                Evaluamos el entorno, las necesidades reales y las posibles evoluciones del proyecto.
-                Definimos una arquitectura técnica coherente desde el inicio, considerando seguridad,
-                estabilidad y posibilidad de crecimiento.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Implementación técnica</h3>
-            <p>
-                Implementamos soluciones basadas en plataformas abiertas y tecnologías probadas,
-                evitando dependencias innecesarias. Todo funciona como un solo ecosistema,
-                con control local y automatización real.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Sistemas en operación real</h3>
-            <p>
-                No trabajamos con simulaciones. Entregamos sistemas diseñados para operar
-                de forma continua y generar resultados desde el primer día.
-            </p>
-        </div>
+<div class="grid">
+    <div class="card">
+        <h3>Análisis y diseño</h3>
+        <p>Evaluamos el entorno y definimos una arquitectura técnica clara desde el inicio.</p>
     </div>
 
-    <!-- 2 ABAJO -->
-    <div class="grid" style="max-width:760px;margin:40px auto 0;">
-        <div class="card">
-            <h3>Detección y alertas</h3>
-            <p>
-                Análisis de eventos en tiempo real y generación automática de alertas
-                ante situaciones relevantes.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Estabilidad y proyección</h3>
-            <p>
-                Sistemas pensados para mantenerse, crecer y adaptarse sin rehacer la instalación,
-                asegurando continuidad operativa.
-            </p>
-        </div>
+    <div class="card">
+        <h3>Implementación técnica</h3>
+        <p>Plataformas abiertas, control local y automatización real.</p>
     </div>
+
+    <div class="card">
+        <h3>Sistemas en operación real</h3>
+        <p>Sistemas diseñados para funcionar desde el primer día.</p>
+    </div>
+</div>
 </section>
 
 <!-- EJEMPLO REAL -->
 <section>
-    <h2>Ejemplo real</h2>
-    <p>Sistema en operación real, no demostración comercial.</p>
+<h2>Ejemplo real</h2>
+<p>Sistema en operación real, no demostración comercial.</p>
 
-    <div class="example-box">
-        <div class="example-grid">
-            <img src="assets/ejemplo-real-1.png" alt="Cámara exterior en operación real">
-            <img src="assets/deteccion-personas.png" alt="Alertas automáticas por detección de personas">
-        </div>
-
-        <p class="example-caption">
-            Instalación real en uso diario. Detección automática de eventos y generación de alertas.
-        </p>
+<div class="example-box">
+    <div class="example-grid">
+        <img src="assets/ejemplo-real-1.png" alt="Cámara exterior en operación real">
+        <img src="assets/deteccion-personas.png" alt="Alertas automáticas por detección de personas">
     </div>
+
+    <p class="example-caption">
+        Instalación real en uso diario. Detección automática de eventos y generación de alertas.
+    </p>
+</div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto">
-    <h2>Hablemos de tu proyecto</h2>
-    <p>
-        Si tienes una idea, una necesidad concreta o un proyecto en desarrollo,
-        conversemos y evaluemos la mejor solución técnica.
-    </p>
+<h2>Hablemos de tu proyecto</h2>
+<p>Si tienes una idea o proyecto en mente, conversemos.</p>
 
-    <div class="contact-wrapper">
-       <form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
-    
-    <!-- CONFIGURACIÓN -->
+<div class="contact-wrapper">
+
+<form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
+
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_subject" value="Nuevo contacto desde Araucanía Smart">
     <input type="hidden" name="_next" value="https://araucaniasmart.com/gracias.html">
 
-    <!-- CAMPOS -->
     <label>
         Nombre
-        <input type="text" name="Nombre" placeholder="Tu nombre" required>
+        <input type="text" name="name" placeholder="Tu nombre" required>
     </label>
 
     <label>
         Correo
-        <input type="email" name="Correo" placeholder="correo@ejemplo.cl" required>
+        <input type="email" name="email" placeholder="correo@ejemplo.cl" required>
     </label>
 
     <label>
         Tipo de proyecto
-        <select name="Tipo de proyecto">
+        <select name="project">
             <option>Hogar</option>
             <option>Empresa</option>
             <option>Proyecto técnico</option>
@@ -362,34 +311,34 @@ footer {
 
     <label>
         Mensaje
-        <textarea name="Mensaje" placeholder="Cuéntanos brevemente tu necesidad o idea." required></textarea>
+        <textarea name="message" rows="4" placeholder="Cuéntanos brevemente tu necesidad o idea." required></textarea>
     </label>
 
     <button type="submit" class="btn">Enviar consulta</button>
+
 </form>
 
+<div class="contact-info">
+    <h3>Contacto directo</h3>
+    <p>
+        📩 contacto@araucaniasmart.com<br>
+        📍 Región de La Araucanía, Chile<br>
+        💬 WhatsApp: +56 9 2013 1606<br>
+        📸 Instagram: @araucaniasmart
+    </p>
 
-        <div class="contact-info">
-            <h3>Contacto directo</h3>
-            <p>
-                📩 contacto@araucaniasmart.com<br>
-                📍 Región de La Araucanía, Chile<br>
-                💬 WhatsApp: +56 9 2013 1606<br>
-                📸 Instagram: @araucaniasmart
-            </p>
+    <p class="claim">
+        Tecnología clara.<br>
+        Implementación seria.
+    </p>
+</div>
 
-            <p class="claim">
-                Tecnología clara.<br>
-                Implementación seria.
-            </p>
-        </div>
-    </div>
+</div>
 </section>
 
 <footer>
-    © Araucanía Smart — Tecnología clara. Implementación seria.
+© Araucanía Smart — Domótica y seguridad inteligente
 </footer>
 
 </body>
 </html>
-
