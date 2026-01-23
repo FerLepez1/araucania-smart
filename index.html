@@ -183,64 +183,60 @@
 <!-- CONTACTO -->
 <section id="contacto">
     <h2>Hablemos de tu proyecto</h2>
-    <p>Si tienes una idea, una necesidad o un proyecto en mente, conversemos.</p>
+    <p>
+        Diseñamos soluciones de monitoreo, automatización y seguridad
+        adaptadas a cada contexto. Si tienes una idea o necesitas
+        orientación técnica, escríbenos.
+    </p>
 
-    <div class="contact-wrapper">
+    <form
+        action="https://formsubmit.co/contacto@araucaniasmart.com"
+        method="POST"
+        class="contact-form"
+    >
 
-        <!-- FORMULARIO FUNCIONAL -->
-        <form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
+        <!-- Seguridad y control -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Nuevo contacto desde Araucanía Smart">
+        <input type="hidden" name="_next" value="https://www.araucaniasmart.com/gracias.html">
 
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="Nuevo contacto desde Araucanía Smart">
-            <input type="hidden" name="_template" value="table">
+        <label>
+            Nombre
+            <input type="text" name="Nombre" required>
+        </label>
 
-            <label>
-                Nombre
-                <input type="text" name="name" required>
-            </label>
+        <label>
+            Correo
+            <input type="email" name="Correo" required>
+        </label>
 
-            <label>
-                Correo
-                <input type="email" name="email" required>
-            </label>
+        <label>
+            Tipo de proyecto
+            <select name="Tipo de proyecto">
+                <option>Hogar</option>
+                <option>Empresa</option>
+                <option>Condominio</option>
+                <option>Otro</option>
+            </select>
+        </label>
 
-            <label>
-                Tipo de proyecto
-                <select name="project_type">
-                    <option>Hogar</option>
-                    <option>Empresa</option>
-                    <option>Proyecto técnico</option>
-                    <option>Otro</option>
-                </select>
-            </label>
+        <label>
+            Mensaje
+            <textarea name="Mensaje" rows="4" required></textarea>
+        </label>
 
-            <label>
-                Mensaje
-                <textarea name="message" rows="4" required></textarea>
-            </label>
+        <button type="submit" class="btn">
+            Enviar consulta
+        </button>
+    </form>
 
-            <button type="submit" class="btn">Enviar consulta</button>
-
-        </form>
-
-        <!-- INFO -->
-        <div class="contact-info">
-            <p><strong>Contacto directo</strong></p>
-            <p>
-                📩 contacto@araucaniasmart.com<br>
-                📍 Región de La Araucanía, Chile<br>
-                📸 Instagram: <a href="https://instagram.com/araucaniasmart" target="_blank">@araucaniasmart</a>
-            </p>
-
-            <p><strong>Tecnología clara.<br>Implementación seria.</strong></p>
-        </div>
-
-    </div>
+    <p style="margin-top:20px; color:#9ca3af;">
+        📩 contacto@araucaniasmart.com<br>
+        📍 Región de La Araucanía, Chile<br>
+        📸 Instagram:
+        <a href="https://instagram.com/araucaniasmart" target="_blank">
+            @araucaniasmart
+        </a>
+    </p>
 </section>
-
-<footer>
-    © Araucanía Smart — Domótica y seguridad inteligente
-</footer>
-
-</body>
-</html>
