@@ -10,8 +10,8 @@
 
 <style>
 :root {
-    --bg-dark: #0b1220;
-    --bg-card: #111827;
+    --bg-dark: #020617;
+    --bg-card: #0f172a;
     --primary: #38bdf8;
     --text-main: #e5e7eb;
     --text-muted: #9ca3af;
@@ -42,12 +42,12 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     margin-bottom: 25px;
 }
 
@@ -71,18 +71,18 @@ a {
     padding: 14px 34px;
     background: var(--primary);
     color: #020617;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 600;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding-top: 130px;
+    padding-top: 140px;
 }
 
 .hero img {
-    width: 180px;
+    width: 230px;
     margin-bottom: 35px;
 }
 
@@ -98,15 +98,15 @@ a {
     background: linear-gradient(180deg, #0f172a, #020617);
     border: 1px solid var(--border-soft);
     padding: 32px;
-    border-radius: 16px;
+    border-radius: 18px;
 }
 
 /* EJEMPLO REAL */
 .example-box {
     background: linear-gradient(180deg, #0f172a, #020617);
     border: 1px solid var(--border-soft);
-    border-radius: 20px;
-    padding: 35px;
+    border-radius: 22px;
+    padding: 40px;
 }
 
 .example-grid {
@@ -118,7 +118,7 @@ a {
 
 .example-grid img {
     width: 100%;
-    border-radius: 14px;
+    border-radius: 16px;
     border: 1px solid var(--border-soft);
 }
 
@@ -134,35 +134,71 @@ a {
     }
 }
 
-.contact-wrapper{
-  display:grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap:60px;
-  margin-top:40px;
+/* CONTACTO */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    margin-top: 40px;
 }
 
-form label{
-  display:block;
-  margin-bottom:18px;
-  font-size:0.9rem;
+form label {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+    color: var(--text-main);
 }
 
-.contact-info h3{
-  margin-bottom:12px;
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-top: 8px;
+    background: #020617;
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    color: var(--text-main);
+    font-size: 0.95rem;
 }
 
-.contact-info .claim{
-  margin-top:24px;
-  font-weight:600;
+form input::placeholder,
+form textarea::placeholder {
+    color: var(--text-muted);
 }
 
-@media(max-width:900px){
-  .contact-wrapper{
-    grid-template-columns:1fr;
-  }
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(56,189,248,0.15);
+    outline: none;
 }
 
-    
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-info h3 {
+    margin-bottom: 14px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info .claim {
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -204,73 +240,69 @@ footer {
         </div>
     </div>
 </section>
-    
+
 <!-- CÓMO TRABAJAMOS -->
 <section>
-  <h2>Cómo trabajamos</h2>
+    <h2>Cómo trabajamos</h2>
 
-  <p>
-    Abordamos cada proyecto como un sistema completo, no como una instalación puntual.
-    Antes de definir cualquier solución técnica, analizamos el contexto, los riesgos,
-    el uso real y las proyecciones futuras del espacio o proyecto.
-  </p>
+    <p>
+        Abordamos cada proyecto como un sistema completo, no como una instalación puntual.
+        Antes de definir cualquier solución técnica, analizamos el contexto, los riesgos,
+        el uso real y las proyecciones futuras del espacio o proyecto.
+    </p>
 
-  <p>
-    Cada decisión técnica tiene un propósito claro; diseñamos una estrategia única
-    según la necesidad de cada proyecto.
-  </p>
+    <p>
+        Cada decisión técnica tiene un propósito claro; diseñamos una estrategia única
+        según la necesidad de cada proyecto.
+    </p>
 
-  <!-- FILA 1 -->
-  <div class="grid">
-    <div class="card">
-      <h3>Análisis y diseño</h3>
-      <p>
-        Evaluamos el entorno, las necesidades reales y las posibles evoliones del proyecto.
-        Definimos una arquitectura técnica coherente desde el inicio, considerando seguridad,
-        estabilidad y la posibilidad de crecimiento sin rehacer el sistema más adelante.
-      </p>
+    <!-- 3 ARRIBA -->
+    <div class="grid">
+        <div class="card">
+            <h3>Análisis y diseño</h3>
+            <p>
+                Evaluamos el entorno, las necesidades reales y las posibles evoluciones del proyecto.
+                Definimos una arquitectura técnica coherente desde el inicio, considerando seguridad,
+                estabilidad y posibilidad de crecimiento.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Implementación técnica</h3>
+            <p>
+                Implementamos soluciones basadas en plataformas abiertas y tecnologías probadas,
+                evitando dependencias innecesarias. Todo funciona como un solo ecosistema,
+                con control local y automatización real.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Sistemas en operación real</h3>
+            <p>
+                No trabajamos con simulaciones. Entregamos sistemas diseñados para operar
+                de forma continua y generar resultados desde el primer día.
+            </p>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>Implementación técnica</h3>
-      <p>
-        Implementamos soluciones basadas en plataformas abiertas y tecnologías probadas,
-        evitando dependencias innecesarias de marcas cerradas o servicios obligatorios.
-        Esto permite que cámaras, sensores y controles funcionen como un solo ecosistema,
-        con control local y automatización real.
-      </p>
-    </div>
+    <!-- 2 ABAJO -->
+    <div class="grid" style="max-width:760px;margin:40px auto 0;">
+        <div class="card">
+            <h3>Detección y alertas</h3>
+            <p>
+                Análisis de eventos en tiempo real y generación automática de alertas
+                ante situaciones relevantes.
+            </p>
+        </div>
 
-    <div class="card">
-      <h3>Sistemas en operación real</h3>
-      <p>
-        Nuestro enfoque se aleja de las simulaciones y los prototipos.
-        Entregamos sistemas diseñados para la ejecución real, operativa y capaces
-        de generar resultados desde el primer día.
-      </p>
+        <div class="card">
+            <h3>Estabilidad y proyección</h3>
+            <p>
+                Sistemas pensados para mantenerse, crecer y adaptarse sin rehacer la instalación,
+                asegurando continuidad operativa.
+            </p>
+        </div>
     </div>
-  </div>
-
-  <!-- FILA 2 -->
-  <div class="grid" style="margin-top:30px;max-width:760px;margin-left:auto;margin-right:auto;">
-    <div class="card">
-      <h3>Detección y alertas</h3>
-      <p>
-        El sistema analiza eventos en tiempo real y genera alertas automáticas
-        cuando detecta situaciones relevantes, permitiendo una respuesta rápida
-        y basada en reglas definidas previamente.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Estabilidad y proyección</h3>
-      <p>
-        Diseñamos sistemas pensados para mantenerse en el tiempo,
-        crecer y adaptarse sin necesidad de rehacer la instalación,
-        asegurando continuidad operativa y control a largo plazo.
-      </p>
-    </div>
-  </div>
 </section>
 
 <!-- EJEMPLO REAL -->
@@ -292,62 +324,60 @@ footer {
 
 <!-- CONTACTO -->
 <section id="contacto">
-  <h2>Hablemos de tu proyecto</h2>
-  <p>
-    Si tienes una idea, una necesidad concreta o un proyecto en desarrollo,
-    conversemos y evaluemos la mejor solución técnica.
-  </p>
+    <h2>Hablemos de tu proyecto</h2>
+    <p>
+        Si tienes una idea, una necesidad concreta o un proyecto en desarrollo,
+        conversemos y evaluemos la mejor solución técnica.
+    </p>
 
-  <div class="contact-wrapper">
+    <div class="contact-wrapper">
+        <form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
 
-    <!-- FORMULARIO -->
-    <form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
+            <label>Nombre
+                <input type="text" name="name" placeholder="Tu nombre" required>
+            </label>
 
-      <label>
-        Nombre
-        <input type="text" name="name" placeholder="Tu nombre" required>
-      </label>
+            <label>Correo
+                <input type="email" name="email" placeholder="correo@ejemplo.cl" required>
+            </label>
 
-      <label>
-        Correo
-        <input type="email" name="email" placeholder="correo@ejemplo.cl" required>
-      </label>
+            <label>Tipo de proyecto
+                <select name="project">
+                    <option>Hogar</option>
+                    <option>Empresa</option>
+                    <option>Proyecto técnico</option>
+                    <option>Otro</option>
+                </select>
+            </label>
 
-      <label>
-        Tipo de proyecto
-        <select name="project">
-          <option>Hogar</option>
-          <option>Empresa</option>
-          <option>Proyecto técnico</option>
-          <option>Otro</option>
-        </select>
-      </label>
+            <label>Mensaje
+                <textarea name="message" placeholder="Cuéntanos brevemente tu necesidad o idea." required></textarea>
+            </label>
 
-      <label>
-        Mensaje
-        <textarea name="message" rows="4"
-          placeholder="Cuéntanos brevemente tu necesidad o idea." required></textarea>
-      </label>
+            <button type="submit" class="btn">Enviar consulta</button>
+        </form>
 
-      <button type="submit" class="btn">Enviar consulta</button>
-    </form>
+        <div class="contact-info">
+            <h3>Contacto directo</h3>
+            <p>
+                📩 contacto@araucaniasmart.com<br>
+                📍 Región de La Araucanía, Chile<br>
+                💬 WhatsApp: +56 9 2013 1606<br>
+                📸 Instagram: @araucaniasmart
+            </p>
 
-    <!-- CONTACTO DIRECTO -->
-    <div class="contact-info">
-      <h3>Contacto directo</h3>
-      <p>
-        📩 contacto@araucaniasmart.com<br>
-        📍 Región de La Araucanía, Chile<br>
-        💬 WhatsApp: +56 9 2013 1606<br>
-        📸 Instagram: @araucaniasmart
-      </p>
-
-      <p class="claim">
-        Tecnología clara.<br>
-        Implementación seria.
-      </p>
+            <p class="claim">
+                Tecnología clara.<br>
+                Implementación seria.
+            </p>
+        </div>
     </div>
-
-  </div>
 </section>
+
+<footer>
+    © Araucanía Smart — Tecnología clara. Implementación seria.
+</footer>
+
+</body>
+</html>
