@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Araucanía Smart | Domótica y seguridad inteligente</title>
-    <meta name="description" content="Domótica y seguridad inteligente para espacios y proyectos. Automatización, sensores, monitoreo y control. Araucanía, Chile.">
+
+    <meta name="description" content="Domótica y seguridad inteligente. Automatización, monitoreo y control para espacios y proyectos. Araucanía, Chile.">
 
     <style>
         :root {
@@ -28,11 +29,6 @@
             line-height: 1.6;
         }
 
-        a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
         section {
             padding: 80px 20px;
             max-width: 1100px;
@@ -41,11 +37,10 @@
 
         h1, h2, h3 {
             font-weight: 600;
-            line-height: 1.3;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             margin-bottom: 20px;
         }
 
@@ -54,20 +49,20 @@
             margin-bottom: 30px;
         }
 
-        h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
         p {
             color: var(--text-muted);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
         }
 
         /* HERO */
         .hero {
             text-align: center;
-            padding-top: 100px;
+            padding-top: 120px;
         }
 
         .hero img {
@@ -75,25 +70,21 @@
             margin-bottom: 30px;
         }
 
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            margin-bottom: 30px;
-        }
-
         .btn {
             display: inline-block;
-            padding: 12px 28px;
-            border-radius: 6px;
+            padding: 12px 30px;
             background-color: var(--primary);
             color: #020617;
+            border-radius: 6px;
             font-weight: 600;
+            border: none;
+            cursor: pointer;
         }
 
         /* GRID */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
         }
 
@@ -103,98 +94,45 @@
             border-radius: 10px;
         }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        ul li::before {
-            content: "• ";
-            color: var(--primary);
-        }
-
-        /* CONTACTO PRO */
-        .contacto-pro {
-            background: #0b1220;
-            border-radius: 16px;
-            padding: 80px 40px;
-        }
-
-        .contacto-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .contacto-header p {
-            max-width: 760px;
-            margin: auto;
-        }
-
-        .contacto-grid {
+        /* CONTACTO */
+        .contact-wrapper {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1fr 1fr;
             gap: 40px;
         }
 
-        .contacto-form {
-            background: var(--bg-light);
+        form {
+            background-color: var(--bg-light);
             padding: 30px;
-            border-radius: 12px;
+            border-radius: 10px;
         }
 
-        .form-group {
-            margin-bottom: 16px;
-        }
-
-        .form-group label {
+        label {
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 15px;
             font-size: 0.9rem;
         }
 
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
+        input, textarea, select {
             width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #1f2937;
-            background: #020617;
+            padding: 10px;
+            margin-top: 6px;
+            background-color: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 6px;
             color: var(--text-main);
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
+        textarea {
+            resize: vertical;
         }
 
-        .btn-contacto {
-            width: 100%;
-            padding: 14px;
-            background: var(--primary);
-            color: #020617;
-            border: none;
-            border-radius: 8px;
-            font-weight: 700;
-            cursor: pointer;
-        }
-
-        .contacto-info {
-            background: #0f172a;
+        .contact-info {
+            background-color: var(--bg-light);
             padding: 30px;
-            border-radius: 12px;
+            border-radius: 10px;
         }
 
-        .contacto-cierre {
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            font-weight: 600;
-        }
-
-        /* FOOTER */
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -202,8 +140,8 @@
             font-size: 0.9rem;
         }
 
-        @media (max-width: 900px) {
-            .contacto-grid {
+        @media (max-width: 800px) {
+            .contact-wrapper {
                 grid-template-columns: 1fr;
             }
         }
@@ -212,114 +150,97 @@
 
 <body>
 
-    <!-- HERO -->
-    <section class="hero">
-        <img src="assets/logo.png" alt="Araucanía Smart">
+<!-- HERO -->
+<section class="hero">
+    <img src="assets/logo.png" alt="Araucanía Smart">
+    <h1>Tecnología clara. Implementación seria.</h1>
+    <p>
+        Domótica y seguridad inteligente para espacios y proyectos.
+        Diseñamos soluciones confiables, escalables y pensadas para el mundo real.
+    </p>
+    <a href="#contacto" class="btn">Contacto</a>
+</section>
 
-        <h1>Tecnología clara. Implementación seria.</h1>
-        <p>
-            Domótica y seguridad inteligente para espacios y proyectos.
-            Diseñamos soluciones que permiten detectar, analizar y actuar
-            ante distintos eventos, priorizando control y estabilidad.
-        </p>
-
-        <a href="#contacto" class="btn">Contacto</a>
-    </section>
-
-    <!-- QUÉ HACEMOS -->
-    <section>
-        <h2>Qué hacemos</h2>
-
-        <div class="grid">
-            <div class="card">
-                <h3>Domótica</h3>
-                <p>Automatización inteligente que detecta movimiento, gas, humo, temperatura y eventos del entorno.</p>
-            </div>
-
-            <div class="card">
-                <h3>Seguridad</h3>
-                <p>Integración de cámaras, sensores y automatizaciones para monitoreo y respuesta activa.</p>
-            </div>
-
-            <div class="card">
-                <h3>Integraciones</h3>
-                <p>Sistemas que trabajan como un solo ecosistema, con notificaciones y acciones inteligentes.</p>
-            </div>
+<!-- QUÉ HACEMOS -->
+<section>
+    <h2>Qué hacemos</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Domótica</h3>
+            <p>Automatización inteligente, sensores, control y monitoreo adaptados a cada espacio.</p>
         </div>
-    </section>
+        <div class="card">
+            <h3>Seguridad</h3>
+            <p>Cámaras, detección de eventos y sistemas activos de respuesta automatizada.</p>
+        </div>
+        <div class="card">
+            <h3>Integraciones</h3>
+            <p>Sistemas que trabajan juntos: datos, reglas y acciones en un solo ecosistema.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- CÓMO TRABAJAMOS -->
-    <section>
-        <h2>Cómo trabajamos</h2>
-        <ul>
-            <li>Soluciones a medida</li>
-            <li>Tecnología abierta y escalable</li>
-            <li>Integraciones reales</li>
-            <li>Enfoque en estabilidad y mantenimiento</li>
-        </ul>
-    </section>
+<!-- CONTACTO -->
+<section id="contacto">
+    <h2>Hablemos de tu proyecto</h2>
+    <p>Si tienes una idea, una necesidad o un proyecto en mente, conversemos.</p>
 
-    <!-- CONTACTO PRO -->
-    <section id="contacto" class="contacto-pro">
-        <div class="contacto-header">
-            <h2>Hablemos de tu proyecto</h2>
+    <div class="contact-wrapper">
+
+        <!-- FORMULARIO FUNCIONAL -->
+        <form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Nuevo contacto desde Araucanía Smart">
+            <input type="hidden" name="_template" value="table">
+
+            <label>
+                Nombre
+                <input type="text" name="name" required>
+            </label>
+
+            <label>
+                Correo
+                <input type="email" name="email" required>
+            </label>
+
+            <label>
+                Tipo de proyecto
+                <select name="project_type">
+                    <option>Hogar</option>
+                    <option>Empresa</option>
+                    <option>Proyecto técnico</option>
+                    <option>Otro</option>
+                </select>
+            </label>
+
+            <label>
+                Mensaje
+                <textarea name="message" rows="4" required></textarea>
+            </label>
+
+            <button type="submit" class="btn">Enviar consulta</button>
+
+        </form>
+
+        <!-- INFO -->
+        <div class="contact-info">
+            <p><strong>Contacto directo</strong></p>
             <p>
-                Diseñamos soluciones de monitoreo, automatización y seguridad adaptadas a cada contexto.
-                Si tienes una idea o necesitas orientación técnica, escríbenos.
+                📩 contacto@araucaniasmart.com<br>
+                📍 Región de La Araucanía, Chile<br>
+                📸 Instagram: <a href="https://instagram.com/araucaniasmart" target="_blank">@araucaniasmart</a>
             </p>
+
+            <p><strong>Tecnología clara.<br>Implementación seria.</strong></p>
         </div>
 
-        <div class="contacto-grid">
-            <form class="contacto-form" action="mailto:contacto@araucaniasmart.com" method="post" enctype="text/plain">
-                <div class="form-group">
-                    <label>Nombre</label>
-                    <input type="text" name="Nombre" required>
-                </div>
+    </div>
+</section>
 
-                <div class="form-group">
-                    <label>Correo</label>
-                    <input type="email" name="Correo" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Tipo de proyecto</label>
-                    <select name="Tipo">
-                        <option>Hogar</option>
-                        <option>Empresa</option>
-                        <option>Institución</option>
-                        <option>Otro / No definido</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Mensaje</label>
-                    <textarea name="Mensaje" rows="4" required></textarea>
-                </div>
-
-                <button class="btn-contacto">Enviar consulta</button>
-            </form>
-
-            <aside class="contacto-info">
-                <h3>Contacto directo</h3>
-                <p>📧 contacto@araucaniasmart.com</p>
-                <p>📍 Región de La Araucanía, Chile</p>
-                <p>
-                    Instagram:
-                    <a href="https://instagram.com/araucaniasmart" target="_blank">@araucaniasmart</a>
-                </p>
-
-                <div class="contacto-cierre">
-                    Tecnología clara.<br>
-                    Implementación seria.
-                </div>
-            </aside>
-        </div>
-    </section>
-
-    <footer>
-        © Araucanía Smart — Domótica y seguridad inteligente
-    </footer>
+<footer>
+    © Araucanía Smart — Domótica y seguridad inteligente
+</footer>
 
 </body>
 </html>
-
