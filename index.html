@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Araucanía Smart | Domótica y seguridad inteligente</title>
 
+    <title>Araucanía Smart | Domótica y seguridad inteligente</title>
     <meta name="description" content="Domótica y seguridad inteligente. Automatización, monitoreo y control para espacios y proyectos. Araucanía, Chile.">
 
     <style>
@@ -30,7 +30,7 @@
         }
 
         section {
-            padding: 80px 20px;
+            padding: 90px 20px;
             max-width: 1100px;
             margin: auto;
         }
@@ -46,12 +46,17 @@
 
         h2 {
             font-size: 2rem;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
         }
 
         p {
             color: var(--text-muted);
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         a {
@@ -81,7 +86,13 @@
             cursor: pointer;
         }
 
-        /* GRID */
+        .btn.secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        /* GRID GENERAL */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -94,11 +105,24 @@
             border-radius: 10px;
         }
 
+        /* CÓMO TRABAJAMOS */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .process-grid .card {
+            min-height: 220px;
+        }
+
         /* CONTACTO */
         .contact-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
+            margin-top: 40px;
         }
 
         form {
@@ -140,7 +164,11 @@
             font-size: 0.9rem;
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
             .contact-wrapper {
                 grid-template-columns: 1fr;
             }
@@ -168,22 +196,24 @@
         <div class="card">
             <h3>Domótica</h3>
             <p>
-                Automatización inteligente, sensores y control centralizado
-                para mejorar confort, eficiencia y control del entorno.
+                Automatización inteligente de espacios mediante sensores,
+                reglas y control centralizado.
             </p>
         </div>
+
         <div class="card">
             <h3>Seguridad</h3>
             <p>
-                Sistemas de monitoreo, cámaras y detección de eventos
-                con respuesta automatizada y enfoque preventivo.
+                Sistemas de vigilancia, detección de eventos y respuesta
+                automatizada en tiempo real.
             </p>
         </div>
+
         <div class="card">
             <h3>Integraciones</h3>
             <p>
-                Ecosistemas tecnológicos donde datos, reglas y acciones
-                trabajan juntos de forma coherente y estable.
+                Ecosistemas donde cámaras, sensores y plataformas
+                trabajan como un solo sistema.
             </p>
         </div>
     </div>
@@ -192,29 +222,29 @@
 <!-- CÓMO TRABAJAMOS -->
 <section>
     <h2>Cómo trabajamos</h2>
-
     <p>
-        Abordamos cada proyecto como un sistema completo, no como una suma de dispositivos.
-        Analizamos el contexto, los riesgos y los objetivos antes de definir cualquier solución técnica.
+        Abordamos cada proyecto como un sistema completo, no como una
+        suma de dispositivos. Analizamos el contexto, los riesgos y
+        los objetivos antes de definir cualquier solución técnica.
     </p>
 
-    <div class="grid">
+    <div class="process-grid">
 
         <div class="card">
             <h3>Análisis y diseño</h3>
             <p>
-                Evaluamos el espacio, el entorno y las necesidades reales del proyecto.
-                Definimos una arquitectura técnica acorde al uso, considerando seguridad,
-                escalabilidad y mantenimiento a largo plazo.
+                Evaluamos el espacio, el entorno y las necesidades reales
+                del proyecto. Definimos una arquitectura técnica acorde
+                al uso, priorizando seguridad, escalabilidad y mantenimiento.
             </p>
         </div>
 
         <div class="card">
             <h3>Implementación técnica</h3>
             <p>
-                Implementamos soluciones basadas en plataformas abiertas y robustas.
-                Utilizamos servidores locales, automatización y sistemas de integración
-                que permiten que cámaras, sensores y controles funcionen como un solo ecosistema.
+                Implementamos soluciones basadas en plataformas abiertas
+                y robustas, utilizando servidores locales, automatización
+                e integración entre cámaras, sensores y controles.
             </p>
         </div>
 
@@ -222,9 +252,8 @@
             <h3>Sistemas en operación real</h3>
             <p>
                 Nuestros sistemas no son demostraciones comerciales.
-                Implementamos soluciones que operan en tiempo real,
-                con detección inteligente de eventos, generación de alertas
-                y respuesta automatizada según reglas definidas.
+                Operan en tiempo real con detección inteligente de eventos,
+                generación de alertas y respuestas automatizadas.
             </p>
         </div>
 
@@ -233,13 +262,13 @@
             <p>
                 Diseñamos sistemas pensados para mantenerse y crecer.
                 Evitamos dependencias innecesarias y soluciones cerradas,
-                priorizando control, estabilidad y continuidad operativa.
+                priorizando continuidad operativa y control a largo plazo.
             </p>
         </div>
 
     </div>
 </section>
-    
+
 <!-- CONTACTO -->
 <section id="contacto">
     <h2>Hablemos de tu proyecto</h2>
@@ -250,10 +279,7 @@
 
     <div class="contact-wrapper">
 
-        <!-- FORMULARIO -->
         <form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
-
-            <!-- CONFIGURACIÓN FORMSUBMIT -->
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="Nuevo contacto desde Araucanía Smart">
             <input type="hidden" name="_template" value="table">
@@ -271,10 +297,9 @@
 
             <label>
                 Tipo de proyecto
-                <select name="Tipo_de_proyecto" required>
+                <select name="Tipo_de_proyecto">
                     <option>Hogar</option>
                     <option>Empresa</option>
-                    <option>Condominio</option>
                     <option>Proyecto técnico</option>
                     <option>Otro</option>
                 </select>
@@ -286,14 +311,12 @@
             </label>
 
             <button type="submit" class="btn">Enviar consulta</button>
-
         </form>
 
-        <!-- INFO -->
         <div class="contact-info">
             <p><strong>Contacto directo</strong></p>
             <p>
-                📩 <a href="mailto:contacto@araucaniasmart.com">contacto@araucaniasmart.com</a><br>
+                📩 contacto@araucaniasmart.com<br>
                 📍 Región de La Araucanía, Chile<br>
                 💬 <a href="https://wa.me/56920131606" target="_blank">WhatsApp +56 9 2013 1606</a><br>
                 📸 <a href="https://instagram.com/araucaniasmart" target="_blank">@araucaniasmart</a>
@@ -311,4 +334,3 @@
 
 </body>
 </html>
-
