@@ -1,196 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Araucanía Smart | Domótica y seguridad inteligente</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Domótica y seguridad inteligente. Automatización, monitoreo y control para espacios reales. Araucanía, Chile.">
+<title>Araucanía Smart | Domótica y seguridad inteligente</title>
 
-    <style>
-        :root {
-            --bg-dark: #0f172a;
-            --bg-light: #111827;
-            --primary: #38bdf8;
-            --text-main: #e5e7eb;
-            --text-muted: #9ca3af;
-            --border-soft: #1e293b;
-        }
+<meta name="description" content="Domótica y seguridad inteligente. Sistemas reales, automatización y control con enfoque técnico y proyección a futuro.">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+:root {
+    --bg-dark: #0b1220;
+    --bg-card: #111827;
+    --primary: #38bdf8;
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+    --border-soft: rgba(255,255,255,0.08);
+}
 
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        section {
-            padding: 90px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: var(--text-main);
+    line-height: 1.6;
+}
 
-        h1, h2, h3 {
-            font-weight: 600;
-        }
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 20px;
+}
 
-        h1 {
-            font-size: 2.4rem;
-            margin-bottom: 20px;
-        }
+h1, h2, h3 {
+    font-weight: 600;
+}
 
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
+h1 {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+}
 
-        h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
+h2 {
+    font-size: 2.1rem;
+    margin-bottom: 25px;
+}
 
-        p {
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
 
-        a {
-            color: var(--primary);
-            text-decoration: none;
-        }
+p {
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
 
-        /* HERO */
-        .hero {
-            text-align: center;
-            padding-top: 120px;
-        }
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
 
-        .hero img {
-            width: 120px;
-            margin-bottom: 30px;
-        }
+.btn {
+    display: inline-block;
+    padding: 14px 34px;
+    background: var(--primary);
+    color: #020617;
+    border-radius: 8px;
+    font-weight: 600;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--primary);
-            color: #020617;
-            border-radius: 6px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-        }
+/* HERO */
+.hero {
+    text-align: center;
+    padding-top: 130px;
+}
 
-        /* GRID */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-        }
+.hero img {
+    width: 180px;
+    margin-bottom: 35px;
+}
 
-        .card {
-            background-color: var(--bg-light);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border-soft);
-        }
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
 
-        /* COMO TRABAJAMOS */
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
+.card {
+    background: linear-gradient(180deg, #0f172a, #020617);
+    border: 1px solid var(--border-soft);
+    padding: 32px;
+    border-radius: 16px;
+}
 
-        /* EJEMPLO REAL */
-        .example-box {
-            background-color: var(--bg-light);
-            border-radius: 14px;
-            padding: 30px;
-            border: 1px solid var(--border-soft);
-        }
+/* EJEMPLO REAL */
+.example-box {
+    background: linear-gradient(180deg, #0f172a, #020617);
+    border: 1px solid var(--border-soft);
+    border-radius: 20px;
+    padding: 35px;
+}
 
-        .example-images {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin-top: 30px;
-        }
+.example-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
 
-        .example-images img {
-            width: 100%;
-            border-radius: 10px;
-            border: 1px solid var(--border-soft);
-        }
+.example-grid img {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid var(--border-soft);
+}
 
-        .example-caption {
-            text-align: center;
-            margin-top: 20px;
-            font-weight: 500;
-            color: var(--text-main);
-        }
+.example-caption {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 500;
+}
 
-        /* CONTACTO */
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
+@media (max-width: 900px) {
+    .example-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
-        form {
-            background-color: var(--bg-light);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border-soft);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-        }
-
-        input, textarea, select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            background-color: #020617;
-            border: 1px solid #1e293b;
-            border-radius: 6px;
-            color: var(--text-main);
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        .contact-info {
-            background-color: var(--bg-light);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border-soft);
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 800px) {
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+</style>
 </head>
 
 <body>
@@ -198,79 +149,55 @@
 <!-- HERO -->
 <section class="hero">
     <img src="assets/logo.png" alt="Araucanía Smart">
-    <h1>Tecnología clara. Implementación seria.</h1>
+    <h1>Tecnología clara.<br>Implementación seria.</h1>
     <p>
-        Domótica y seguridad inteligente para espacios reales.
-        Diseñamos soluciones confiables, pensadas para hoy y para el futuro.
+        Diseñamos e implementamos sistemas de domótica y seguridad inteligente
+        pensados para operar hoy y crecer mañana.
     </p>
     <a href="#contacto" class="btn">Contacto</a>
 </section>
 
-<!-- QUE HACEMOS -->
-<section>
-    <h2>Qué hacemos</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Domótica</h3>
-            <p>Automatización inteligente, sensores y control adaptados a cada espacio.</p>
-        </div>
-        <div class="card">
-            <h3>Seguridad</h3>
-            <p>Cámaras, detección de eventos y sistemas de respuesta automatizada.</p>
-        </div>
-        <div class="card">
-            <h3>Integración</h3>
-            <p>Todo funciona como un solo sistema, no como piezas aisladas.</p>
-        </div>
-    </div>
-</section>
-
-<!-- COMO TRABAJAMOS -->
+<!-- CÓMO TRABAJAMOS -->
 <section>
     <h2>Cómo trabajamos</h2>
+
     <p>
         Abordamos cada proyecto como un sistema completo, no como una instalación puntual.
-        Analizamos el contexto, los riesgos y el uso real antes de definir cualquier solución.
+        Antes de definir cualquier solución técnica, analizamos el contexto, los riesgos,
+        el uso real y las proyecciones futuras del espacio o proyecto.
     </p>
 
-    <div class="work-grid">
+    <p>
+        Cada decisión técnica tiene un propósito claro; diseñamos una estrategia única
+        según la necesidad de cada proyecto.
+    </p>
+
+    <div class="grid">
         <div class="card">
             <h3>Análisis y diseño</h3>
             <p>
-                Evaluamos el entorno y las necesidades reales.
-                Definimos una arquitectura clara desde el inicio, evitando soluciones improvisadas.
+                Evaluamos el entorno, las necesidades reales y las posibles evoliones del proyecto.
+                Definimos una arquitectura técnica coherente desde el inicio, considerando seguridad,
+                estabilidad y la posibilidad de crecimiento sin rehacer el sistema más adelante.
             </p>
         </div>
 
         <div class="card">
             <h3>Implementación técnica</h3>
             <p>
-                Utilizamos plataformas abiertas y tecnologías probadas,
-                permitiendo que cámaras, sensores y controles trabajen como un solo ecosistema.
+                Implementamos soluciones basadas en plataformas abiertas y tecnologías probadas,
+                evitando dependencias innecesarias de marcas cerradas o servicios obligatorios.
+                Esto permite que cámaras, sensores y controles funcionen como un solo ecosistema,
+                con control local y automatización real.
             </p>
         </div>
 
         <div class="card">
             <h3>Sistemas en operación real</h3>
             <p>
-                No instalamos demostraciones.
-                Implementamos sistemas que funcionan día a día, con reglas, alertas y automatización real.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Detección y alertas</h3>
-            <p>
-                El sistema analiza eventos en tiempo real y genera alertas automáticas
-                cuando detecta situaciones relevantes.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Estabilidad y proyección</h3>
-            <p>
-                Diseñamos sistemas pensados para mantenerse, crecer y adaptarse
-                sin rehacer todo desde cero.
+                Nuestro enfoque se aleja de las simulaciones y los prototipos. Entregamos sistemas
+                diseñados para la ejecución real, operativa y capaces de generar resultados desde
+                el primer día.
             </p>
         </div>
     </div>
@@ -282,73 +209,33 @@
     <p>Sistema en operación real, no demostración comercial.</p>
 
     <div class="example-box">
-        <div class="example-images">
-            <img src="assets/ejemplo-real-1.png" alt="Sistema de cámaras en operación real">
-            <img src="assets/deteccion-personas.png" alt="Registro de detección automática de personas">
+        <div class="example-grid">
+            <img src="assets/ejemplo-real-1.png" alt="Cámara exterior en operación real">
+            <img src="assets/deteccion-personas.png" alt="Alertas automáticas por detección de personas">
         </div>
 
         <p class="example-caption">
-            Instalación real en uso diario.  
-            Detección automática de eventos y generación de alertas.
+            Instalación real en uso diario. Detección automática de eventos y generación de alertas.
         </p>
     </div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto">
-    <h2>Hablemos de tu proyecto</h2>
-    <p>Si tienes una idea o una necesidad concreta, conversemos.</p>
+    <h2>Contacto</h2>
+    <p>
+        Escríbenos y conversemos tu proyecto.
+    </p>
 
-    <div class="contact-wrapper">
-        <form action="https://formsubmit.co/contacto@araucaniasmart.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="Nuevo contacto desde Araucanía Smart">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="gracias.html">
-
-            <label>
-                Nombre
-                <input type="text" name="name" required>
-            </label>
-
-            <label>
-                Correo
-                <input type="email" name="email" required>
-            </label>
-
-            <label>
-                Tipo de proyecto
-                <select name="project_type">
-                    <option>Hogar</option>
-                    <option>Empresa</option>
-                    <option>Proyecto técnico</option>
-                    <option>Otro</option>
-                </select>
-            </label>
-
-            <label>
-                Mensaje
-                <textarea name="message" rows="4" required></textarea>
-            </label>
-
-            <button type="submit" class="btn">Enviar consulta</button>
-        </form>
-
-        <div class="contact-info">
-            <p><strong>Contacto directo</strong></p>
-            <p>
-                📩 contacto@araucaniasmart.com<br>
-                📍 Región de La Araucanía, Chile<br>
-                💬 WhatsApp: <a href="https://wa.me/56920131606" target="_blank">+56 9 2013 1606</a>
-            </p>
-
-            <p><strong>Tecnología clara.<br>Implementación seria.</strong></p>
-        </div>
-    </div>
+    <p>
+        📩 contacto@araucaniasmart.com<br>
+        📍 Región de La Araucanía, Chile<br>
+        💬 WhatsApp: <a href="https://wa.me/56920131606" target="_blank">+56 9 2013 1606</a>
+    </p>
 </section>
 
 <footer>
-    © Araucanía Smart — Domótica y seguridad inteligente
+    © Araucanía Smart — Tecnología clara. Implementación seria.
 </footer>
 
 </body>
