@@ -5,8 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Araucanía Smart | Monitoreo inteligente de edificios</title>
 <meta name="description" content="Monitoreo operacional inteligente para edificios en La Araucanía. Temperatura, humedad, consumo eléctrico y alertas en tiempo real por WhatsApp. Piloto gratuito 30 días.">
+<meta name="keywords" content="monitoreo edificios temuco, IoT araucania, ahorro energetico chile, sensor temperatura edificio, smart building temuco">
+<meta name="author" content="Araucanía Smart">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://araucaniasmart.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://araucaniasmart.com/">
+<meta property="og:title" content="Araucanía Smart | Monitoreo inteligente de edificios">
+<meta property="og:description" content="Monitoreo de temperatura, humedad y consumo eléctrico con alertas por WhatsApp. Piloto gratuito 30 días. Sin inversión inicial.">
+<meta property="og:locale" content="es_CL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Araucanía Smart | Monitoreo inteligente de edificios">
+<meta name="twitter:description" content="Monitoreo inteligente para edificios en La Araucanía. Alertas por WhatsApp. Piloto gratuito 30 días.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230c1524'/><text y='22' x='4' font-size='20' font-family='monospace' fill='%2338bdf8'>A</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -28,7 +42,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.65;
@@ -65,7 +79,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--text);
@@ -144,11 +158,11 @@ nav {
 }
 
 .hero h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2.8rem, 7vw, 5.5rem);
   font-weight: 800;
-  line-height: 1.07;
-  letter-spacing: -0.03em;
+  line-height: 1.09;
+  letter-spacing: -0.04em;
   max-width: 820px;
   animation: fadeUp 0.8s 0.1s ease both;
 }
@@ -228,7 +242,7 @@ nav {
 .stat-item { text-align: center; }
 
 .stat-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 2rem;
   font-weight: 800;
   color: var(--primary);
@@ -245,6 +259,68 @@ nav {
 @keyframes fadeUp {
   from { opacity:0; transform:translateY(24px); }
   to   { opacity:1; transform:translateY(0); }
+}
+
+@keyframes scrollBounce {
+  0%,100% { transform: translateY(0); opacity:0.6; }
+  50%      { transform: translateY(8px); opacity:1; }
+}
+
+/* Scroll indicator */
+.scroll-hint {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  animation: fadeUp 1s 1s ease both;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.scroll-hint span {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.scroll-arrow {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 0.8rem;
+  animation: scrollBounce 2s infinite;
+}
+
+/* Stat separator */
+.hero-stats .stat-item + .stat-item {
+  border-left: 1px solid var(--border);
+  padding-left: 48px;
+}
+
+/* Mejorar contraste de texto muted en cards */
+.problem-card p,
+.device-specs li,
+.plan-features li {
+  line-height: 1.65;
+}
+
+/* Hover en stat-num */
+.stat-num {
+  transition: color 0.2s;
+}
+.stat-item:hover .stat-num {
+  color: var(--accent);
 }
 
 /* ── SECCIONES ── */
@@ -265,11 +341,11 @@ nav {
 }
 
 .section-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 700;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   margin-bottom: 20px;
 }
 
@@ -306,7 +382,7 @@ nav {
 }
 
 .problem-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--text);
@@ -379,7 +455,7 @@ nav {
 .device-tag.green { background: rgba(52,211,153,0.1); color: var(--accent); border: 1px solid rgba(52,211,153,0.2); }
 
 .device-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 8px;
@@ -452,7 +528,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--primary);
@@ -469,7 +545,7 @@ nav {
 }
 
 .flow-step h4 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--text);
@@ -523,7 +599,7 @@ nav {
 }
 
 .plan-name {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--muted);
@@ -533,7 +609,7 @@ nav {
 }
 
 .plan-price {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 2.2rem;
   font-weight: 800;
   color: var(--text);
@@ -631,7 +707,7 @@ nav {
 }
 
 .piloto-box h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--accent);
@@ -667,7 +743,7 @@ nav {
 .client-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
 
 .client-card h4 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--text);
@@ -731,7 +807,7 @@ nav {
 }
 
 .diff-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--primary);
@@ -763,11 +839,11 @@ nav {
 }
 
 .contact-left h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 700;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   margin-bottom: 20px;
 }
 
@@ -820,7 +896,7 @@ nav {
 }
 
 .form-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 28px;
@@ -850,7 +926,7 @@ nav {
   border: 1px solid var(--border);
   border-radius: 8px;
   color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 0.92rem;
   transition: border-color 0.2s, box-shadow 0.2s;
   outline: none;
@@ -880,7 +956,7 @@ nav {
   color: var(--bg);
   border: none;
   border-radius: 8px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
@@ -962,12 +1038,10 @@ footer {
     Sistema activo en La Araucanía
   </div>
 
-  <h1>Tu edificio habla.<br><em>Nosotros te lo traducimos.</em></h1>
+  <h1>Control automático.<br><em>Ahorro real.</em></h1>
 
   <p class="hero-sub">
-    Monitoreo inteligente de temperatura, humedad y consumo eléctrico.
-    Alertas por WhatsApp antes de que algo salga mal.
-    Sin inversión inicial.
+    Sensores inteligentes que automatizan tus equipos, reducen el consumo y te avisan antes de que algo falle. Tú defines las reglas. El sistema las ejecuta.
   </p>
 
   <div class="hero-actions">
@@ -993,6 +1067,12 @@ footer {
       <span class="stat-label">Precisión del sensor</span>
     </div>
   </div>
+
+  <!-- Scroll indicator -->
+  <a href="#problema" class="scroll-hint">
+    <span>Descubrir</span>
+    <div class="scroll-arrow">↓</div>
+  </a>
 </section>
 
 <!-- EL PROBLEMA -->
